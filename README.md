@@ -8,6 +8,7 @@ A fully functional Food Delivery Website with multiple sections and interactive 
 - 📞 Contact  
 - 🍽️ Menu
 - 🛍️ Product
+- ⭐ Review
 - 📝 Blog  
 - 🔐 Login / Forgot Password / Create Account  
 
