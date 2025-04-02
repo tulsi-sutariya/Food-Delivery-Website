@@ -1,0 +1,178 @@
+.review{
+    background-color: black;
+    padding: 20px;
+   
+}
+.review .box-container{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 30px;
+    grid-row-gap: 45px;
+    color: white;
+    padding-top: 28px;
+    padding-left: 60px;
+}
+
+.review .box-container .box{
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid red;
+    padding:5px 20px;
+    transition: all 0.4s ease;
+    border-radius: 0 0 50% 50%;
+}
+.review .box-container .box img{
+    width: 27%;
+    padding-block: 8px;
+    border-radius: 50%;
+    padding-top: 5px;
+}
+.review .box-container .box .fa-solid{
+    color: red;
+    font-size: 80px;
+}
+.review .box-container .box .stars{
+   display: flex;
+   justify-content: center;
+    padding-top: 10px;
+    gap: 7px;
+    padding-bottom: 21px;
+}
+.review .box-container .box .stars i{
+    font-size: 22px;
+    margin-top: 3px;
+    color: red;
+}
+.review .box-container .box h3{
+    padding-top: 8px;
+}
+.review .box-container .box p{
+    text-align: center;
+    margin-bottom: 8px;
+    line-height: 1.43;
+}
+
+/* Review Form */
+.review-form {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.review-form h2 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 35px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.review-form input,
+.review-form textarea,
+.review-form button {
+    width: 68%;
+    padding: 10px;
+    padding-left: 20px;
+    margin-bottom: 23px;
+    border: 1px solid white;
+    font-size: 19px;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    color: white;
+}
+.review-form textarea{
+    resize: none;
+}
+.review-form input:focus,
+.review-form textarea:focus,
+.review-form input[type="file"]:focus {
+    outline: none;
+    border: 1px solid red;
+ 
+}
+.review-form input:focus,.review-form textarea:focus{
+  border: 1px solid red;
+ }
+.review-form button {
+    background-color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    color: black;
+    transition: all 0.4s ease;
+}
+
+.review-form button:hover{
+   color: white !important;
+    background-color: red;
+   border: 1px solid red;
+}
+
+/* Thank You Message */
+.thank-you {
+   /* margin-top: 20px;
+    padding: 15px;
+    background-color: #333;
+    border: 2px solid green;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    width: 50%;
+    margin: 20px auto;*/
+    position: fixed;
+  bottom: 120px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 25px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-out, fadeOut 0.5s 2.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  
+.thank-you.hidden {
+    display: none;
+}
+.review-form input[type="file"] {
+    color:gray;
+    cursor: pointer;
+}
+/* Error Message */
+.error-message {
+    color: red;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+/* Add spacing for review form error */
+.review-form .word-error {
+    color: red;
+    margin-top: -8px;
+    margin-bottom: 15px;
+}

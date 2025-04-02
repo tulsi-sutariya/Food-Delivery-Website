@@ -1,0 +1,105 @@
+#blogs{
+    background-color: black;
+    color: white;
+}
+.blogs h1{
+    text-align: center;
+    font-size: 35px;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+.blogs h1 span{
+    padding-left: 5px;
+    color: red;
+}
+.blogs .blogs-container{
+    display: grid;
+    margin-top: 25px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    grid-template-columns: 30% 30% 30%;
+    gap: 20px;
+}
+.blogs .blogs-container .blogs-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    align-items: center;
+}
+.blogs .blogs-container .blogs-box .blogs-img{
+    flex-basis: 50%;
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+   
+}
+.blogs .blogs-container .blogs-box .blogs-contain{
+    flex-basis: 50%;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+.blogs .blogs-container .blogs-box .blogs-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+.blogs .blogs-container .blogs-box .first img{
+    height: 100%;
+    object-fit: cover;
+}
+.blogs .blogs-container .blogs-box .blogs-img:hover img{
+    transform: scale(1.2);
+}
+.blogs .blogs-container .blogs-box .blogs-contain h2{
+    transition: all 0.3s ease;
+}
+.blogs .blogs-container .blogs-box .blogs-contain h2:hover{
+    color:red;
+}
+.blogs .blogs-container .blogs-box .blogs-contain h4{
+    padding-top: 10px;
+    font-size: 18px;
+    color: red;
+}
+.blogs .blogs-container .blogs-box .blogs-contain p{
+    padding-top:10px ;
+    line-height: 23px;
+}
+.blogs .blogs-container .blogs-box .blogs-contain button{
+    border: 1px solid red;
+    padding: 9px 30px;
+    margin-top: 18px;
+    cursor: pointer;
+    color: white;
+    border-radius: 20px;
+    background-color: red;
+    font-weight: 500;
+    font-size: 20px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    position: relative;
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+.blogs .blogs-container .blogs-box .blogs-contain button::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    border: 1px solid red;
+    color: white;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 20px;
+    height: 0%;
+    transition: all 0.4s ease;
+    border: none;
+}
+.blogs .blogs-container .blogs-box .blogs-contain button:hover::before{
+    height: 100%;
+}

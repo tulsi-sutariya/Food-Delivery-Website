@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fogot Password</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .forgot{
+            height: 63vh;
+        }
+        div{
+          margin-top: 18px;
+          margin-bottom: 0px;
+        }
+        .error{
+            margin-block: 15px;
+            margin-bottom: 4px;
+        }
+        button{
+            margin-top: 3px;
+        }
+        .cross{
+            top: -20px;
+        }
+        h1{
+            margin-top: 48px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper forgot">
+      <div id="success-message" class="success-message" style="display:none;">
+        <p id="success-text"></p>
+      </div>
+        <div class="cross">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <h1>Forgot Password</h1>
+        <form id="form">
+          <div>
+            <label for="email-input">
+              <span>✉️</span>
+            </label>
+            <input type="email" name="email"  id="email-input" placeholder="Enter email address">
+          </div>  
+          <p id="error-message" class="error"></p>
+          <button type="submit" id="con-btn" >Continue</button>
+        </form>
+       
+      </div>
+
+      <script>
+        document.querySelector('.forgot').addEventListener('submit', function (e) {
+  e.preventDefault() // Prevents form submission
+
+  const email_input = document.getElementById('email-input')
+  const error_message = document.getElementById('error-message')
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  if(!emailPattern.test(email_input.value)){
+    error_message.innerHTML = "Please enter a valid email address"
+      email_input.parentElement.classList.add('incorrect')
+  }
+  // Check if email is empty
+  if (email_input.value === '' || email_input.value == null) {
+      error_message.innerHTML = "Please enter your email address"
+      email_input.parentElement.classList.add('incorrect')
+  } else {
+      error_message.innerHTML = " "
+      email_input.parentElement.classList.remove('incorrect')
+      e.preventDefault();
+    showSuccessMessage('Password reset link has been successfully sent your email');
+    setTimeout(() => {
+     sessionStorage.setItem('lastPage', window.location.href);; // Change to your dashboard or home page
+    }, 2000);
+
+      // Optional: Simulate form submission after success
+      setTimeout(() => {
+          document.querySelector(".forgot").submit()
+      }, 1000) // Optional delay
+  }
+})
+
+// Function to show success message
+function showSuccessMessage(message) {
+  const successMessage = document.getElementById('success-message');
+  const successText = document.getElementById('success-text');
+  successText.innerText = message;
+  successMessage.style.display = 'block';
+
+  setTimeout(() => {
+    successMessage.style.display = 'none';
+  }, 3000);
+}
+
+document.querySelector('.cross').addEventListener('click',function(){
+ //window.location.assign('1-Food-Website.html')
+
+  const lastPage = sessionStorage.getItem('lastPage') || '1-Food-Website.html';
+  window.location.href = lastPage;
+ 
+});
+
+      </script>
+</body>
+</html>

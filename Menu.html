@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1- Food Delivery Website</title>
+
+    <link rel="stylesheet" href="Menu.css">
+    <link rel="stylesheet" href="1-Food-Website.css">
+     <!----------- icon link --------------->
+     <link rel="icon" href="https://th.bing.com/th/id/OIP.H1r6fnSqqSb_YWL5mxFLMQHaHa?rs=1&pid=ImgDetMain">
+
+    
+     <!------- icon link  ---------->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+         <!----------- Scrolling effect ------------->
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<header>
+   <div class="logo"><img src="https://th.bing.com/th/id/OIP.H1r6fnSqqSb_YWL5mxFLMQHaHa?rs=1&pid=ImgDetMain" alt=""></div>
+   <nav>
+       <a href="1-Food-Website.html" >Home</a>
+       <a href="About.html">About</a>
+       <a href="Menu.html" class="active" aria-current="page" >Menu</a>
+       <a href="Products.html">Products</a>
+       <a href="Review.html">Review</a>
+       <a href="Contact.html">Contact</a>
+       <a href="Blog.html">Blogs</a>
+   </nav>
+   <div class="search-btn">
+       <div class="search-bar">
+           <div class="s-c">
+               <i class="fa fa-search" aria-hidden="true" id="sh"></i>
+           <i class="fa fa-shopping-cart" aria-hidden="true" id="cart" onclick="showCart()">
+            <span id="cart-count">0</span>
+           </i>
+       </div>
+           <div class="search-input">
+               <input type="text" name="Search" placeholder="Search...." autocomplete="off">
+               <span id="microphone">
+                   <i class="fa fa-microphone" aria-hidden="true" id="micro" style="color: black;"></i>
+               </span>
+               <span>
+                   <i class="fa fa-search" aria-hidden="true" id="sh1"></i>
+               </span>
+           </div>
+       </div>
+      <button class="log-btn"><a href="login.html" >Login</a>
+      </button>
+   </div>
+   </div>
+</header>
+<body>
+    <section class="menu" id="menu">
+        <div class="menu-btn">
+         <span class="btn active" data-name="all">All</span>
+         <span class="btn" data-name="chines">Chines</span>
+         <span class="btn" data-name="panjabi">Panjabi</span>
+         <span class="btn" data-name="gujrati">Gujarati</span>
+         <span class="btn" data-name="south indian">Sounth Indian</span>
+         <span class="btn" data-name="breakfast">Break Fast</span>
+        </div>
+        <div class="box">
+         <!------------------------ chines --------------------->
+            <div class="box-container" data-name="chines"  data-id="1" data-realname="Veg manchurian" data-price="180" data-image="https://t4.ftcdn.net/jpg/08/02/44/25/360_F_802442564_uHRiD5Lc3GUHoO4DJjjqtjOLj5Qwg5fC.jpg">
+               <div class="menu-img">
+                  <img src="https://t4.ftcdn.net/jpg/08/02/44/25/360_F_802442564_uHRiD5Lc3GUHoO4DJjjqtjOLj5Qwg5fC.jpg" alt=""></div>
+                <h3>Veg manchurian</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(1)">Add To Cart</button>
+            </div>
+    
+            <div class="box-container" data-name="chines" data-id="2" data-realname="Fry Noodels" data-price="180" data-image="https://media.istockphoto.com/id/1265525094/photo/stir-fry-noodles-with-vegetables-and-beef-in-black-bowl-slate-background-close-up-top-view.jpg?s=612x612&w=0&k=20&c=zxs6HeVUZpAJZkKrOQlZudwOwZDTKeo4t0ZGRKEK6LM=">
+               <div class="menu-img"><img src="https://media.istockphoto.com/id/1265525094/photo/stir-fry-noodles-with-vegetables-and-beef-in-black-bowl-slate-background-close-up-top-view.jpg?s=612x612&w=0&k=20&c=zxs6HeVUZpAJZkKrOQlZudwOwZDTKeo4t0ZGRKEK6LM=" alt=""></div>
+                <h3>Fry Noodels</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(2)">Add To Cart</button>
+            </div>
+    
+            <div class="box-container" data-name="chines" data-id="3" data-realname="Pasta" data-price="180" data-image="https://img.freepik.com/premium-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-9791.jpg?ga=GA1.1.691280949.1716489439&semt=ais_hybrid" >
+             
+               <div class="menu-img"><img src="https://img.freepik.com/premium-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-9791.jpg?ga=GA1.1.691280949.1716489439&semt=ais_hybrid" alt=""></div>
+                <h3>Pasta</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(3)">Add To Cart</button>
+            </div>
+    
+            <div class="box-container" data-name="chines" data-id="4" data-realname="Fried Rice" data-price="180" data-image="https://i.pinimg.com/564x/d4/6a/bf/d46abf05d87943d2ae818b439aa5fb9d.jpg">
+             
+               <div class="menu-img"><img src="https://i.pinimg.com/564x/d4/6a/bf/d46abf05d87943d2ae818b439aa5fb9d.jpg" alt=""></div>
+                <h3>Fried Rice</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(4)">Add To Cart</button>
+            </div>
+            <div class="box-container" data-name="chines" data-id="5" data-realname=" Spring Rolls" data-price="180"   data-image="https://static.vecteezy.com/system/resources/previews/046/933/636/non_2x/spring-roll-platter-in-a-plate-on-transparent-background-png.png">
+
+               <div class="menu-img"><img src="https://static.vecteezy.com/system/resources/previews/046/933/636/non_2x/spring-roll-platter-in-a-plate-on-transparent-background-png.png" alt=""></div>
+                <h3>Spring Rolls</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(5)">Add To Cart</button>
+            </div>
+            <div class="box-container" data-name="chines" data-id="6" data-realname="Chow Mein" data-price="180" data-image="https://img.freepik.com/premium-photo/chow-mein-black-plate-top-view_636537-49585.jpg">
+
+                <div class="menu-img"><img src="https://img.freepik.com/premium-photo/chow-mein-black-plate-top-view_636537-49585.jpg" alt=""></div>
+                <h3>Chow Mein</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(6)">Add To Cart</button>
+            </div>
+
+            <div class="box-container" data-name="chines" data-id="7" data-realname="Chines Dumpling" data-price="180" data-image="https://img.freepik.com/premium-photo/chinese-dumpling-top-view-generative-ai_869784-2499.jpg">
+
+               <div class="menu-img"><img src="https://img.freepik.com/premium-photo/chinese-dumpling-top-view-generative-ai_869784-2499.jpg" alt=""></div>
+                <h3>Chines Dumpling</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(7)">Add To Cart</button>
+            </div>
+    
+
+            <div class="box-container" data-name="chines"  data-id="8" data-realname="Chines Bhel" data-price="180" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRusIoUJX2FeEK_WzHQQgv0OWaYbugZN16WN_DHlh1hn74qyvTFccYjbFbC6nnna1oSX7I&usqp=CAU">
+
+               <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRusIoUJX2FeEK_WzHQQgv0OWaYbugZN16WN_DHlh1hn74qyvTFccYjbFbC6nnna1oSX7I&usqp=CAU" alt=""></div>
+                <h3>Chines Bhel</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(8)">Add To Cart</button>
+            </div>
+    
+<!------------------ Panjabi ------------------->
+            <div class="box-container" data-name="panjabi" data-id="9" data-realname="Chole Bhature" data-price="180" data-image="https://thumbs.dreamstime.com/b/chickpeas-masala-spicy-chola-chhole-curry-bhatura-puri-garnished-fresh-green-coriander-ingredients-chickpeas-219412885.jpg?w=768">
+
+               <div class="menu-img"><img src="https://thumbs.dreamstime.com/b/chickpeas-masala-spicy-chola-chhole-curry-bhatura-puri-garnished-fresh-green-coriander-ingredients-chickpeas-219412885.jpg?w=768" alt=""></div>
+                <h3>Chole Bhature</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(9)">Add To Cart</button>
+            </div>
+    
+
+            <div class="box-container" data-name="panjabi" data-id="10" data-realname="Salt Lassi" data-price="180" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIuIAdMgjj5G8-ufkFwVQvStB6tn7bNzBnmx3yxlB0zfYr7Ci5yRB_QmqfmxcoezJG89A&usqp=CAU">
+
+               <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIuIAdMgjj5G8-ufkFwVQvStB6tn7bNzBnmx3yxlB0zfYr7Ci5yRB_QmqfmxcoezJG89A&usqp=CAU" alt=""></div>
+                <h3>Salt Lassi</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(10)">Add To Cart</button>
+            </div>
+    
+
+            <div class="box-container" data-name="panjabi" data-id="11" data-realname="Saag and Roti" data-price="180" data-image="https://c8.alamy.com/comp/KPDN2R/sarson-ka-saag-makki-ki-roti-popular-north-indian-main-course-menu-KPDN2R.jpg">
+
+               <div class="menu-img"><img src="https://c8.alamy.com/comp/KPDN2R/sarson-ka-saag-makki-ki-roti-popular-north-indian-main-course-menu-KPDN2R.jpg" alt=""></div>
+                <h3>Saag and Roti</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <butto onclick="addToCart(11)">Add To Cart</butto>
+            </div>
+    
+            <div class="box-container" data-name="panjabi" data-id="12" data-realname="Shami Khabab" data-price="180" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKy_8oi3FVyQoVzm_Otr0my_Nzb2D6UlHVoQ&">
+
+               <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKy_8oi3FVyQoVzm_Otr0my_Nzb2D6UlHVoQ&" alt=""></div>
+                <h3>Shami Khabab</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(12)">Add To Cart</button>
+            </div>
+<!---------------------- Gujrati ------------------------>
+            <div class="box-container" data-name="gujrati" data-id="13" data-realname="Thepla" data-price="180" data-image="https://www.indianhealthyrecipes.com/wp-content/uploads/2023/03/thepla-recipe.webp">
+
+               <div class="menu-img"><img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2023/03/thepla-recipe.webp" alt=""></div>
+                <h3>Thepla</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(13)">Add To Cart</button>
+            </div>
+
+            <div class="box-container" data-name="gujrati" data-id="14" data-realname="Fafda and Jalebi" data-price="180" data-image="https://images.picxy.com/cache/2021/11/2/83e77bda8e8999f9bfb3bff7791ef575.jpg">
+
+               <div class="menu-img"><img src="https://images.picxy.com/cache/2021/11/2/83e77bda8e8999f9bfb3bff7791ef575.jpg" alt=""></div>
+                <h3>Fafda and Jalebi</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(14)">Add To Cart</button>
+            </div>
+
+            <div class="box-container" data-name="gujrati"  data-id="15" data-realname="Dal Dhokli" data-price="180" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwhvoNv0wRfG1n-oWynVBzMr45b8pbOkNoyg&s">
+
+               <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwhvoNv0wRfG1n-oWynVBzMr45b8pbOkNoyg&s" alt=""></div>
+                <h3>Dal Dhokli</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(15)">Add To Cart</button>
+            </div>
+
+            <div class="box-container" data-name="gujrati" data-id="16" data-realname="Handvo" data-price="180" data-image="https://www.vegrecipesofindia.com/wp-content/uploads/2017/08/handvo-recipe-1-500x500.jpg">
+
+               <div class="menu-img"><img src="https://www.vegrecipesofindia.com/wp-content/uploads/2017/08/handvo-recipe-1-500x500.jpg" alt=""></div>
+                <h3>Handvo</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(16)">Add To Cart</button>
+            </div>
+
+            <div class="box-container" data-name="gujrati" data-id="17" data-realname="Bhel Puri" data-price="20" data-image="https://www.indianveggiedelight.com/wp-content/uploads/2022/08/bhel-puri-new.jpg">
+
+               <div class="menu-img"><img src="https://www.indianveggiedelight.com/wp-content/uploads/2022/08/bhel-puri-new.jpg" alt=""></div>
+                <h3>Bhel Puri</h3>
+                <div class="price">₹20 <span>₹30</span></div>
+               <button onclick="addToCart(17)">Add To Cart</button>
+            </div>
+
+            <div class="box-container" data-name="gujrati" data-id="18" data-realname="Aloo Tikki" data-price="180" data-image="https://th.bing.com/th/id/OIP.iJHZhgyDH2zFX6Wd_kqoTgAAAA?rs=1&pid=ImgDetMain">
+
+               <div class="menu-img"><img src="https://th.bing.com/th/id/OIP.iJHZhgyDH2zFX6Wd_kqoTgAAAA?rs=1&pid=ImgDetMain" alt=""></div>
+                <h3>Aloo Tikki</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(18)">Add To Cart</button>
+            </div>
+
+            <div class="box-container" data-name="gujrati"  data-id="19" data-realname="Kathi" data-price="180" data-image="https://i.pinimg.com/736x/04/d9/4d/04d94d8a949e72f7b11a6b2addc12016.jpg">
+
+               <div class="menu-img"><img src="https://i.pinimg.com/736x/04/d9/4d/04d94d8a949e72f7b11a6b2addc12016.jpg" alt=""></div>
+                <h3>Kathi</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(19)">Add To Cart</button>
+            </div>
+<!------------- South Indian ------------------>
+            <div class="box-container" data-name="south indian" data-id="20" data-realname="Masala Dosa" data-price="180" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJVrC2Z7OCjmZQ1vrNmWWaJRrMaJ9HzFn2kg&s">
+
+               <div class="menu-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJVrC2Z7OCjmZQ1vrNmWWaJRrMaJ9HzFn2kg&s" alt=""></div>
+                <h3>Masala Dosa</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(20)">Add To Cart</button>
+            </div>
+
+            <div class="box-container" data-name="south indian" data-id="21" data-realname="Vada" data-price="180" data-image="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/vada-recipe-1.jpg">
+
+               <div class="menu-img"><img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/vada-recipe-1.jpg" alt=""></div>
+                <h3>Vada</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(21)">Add To Cart</button>
+            </div>
+
+            <div class="box-container" data-name="south indian" data-id="22" data-realname="Biryani" data-price="180" data-image="https://i.ytimg.com/vi/oskLFFcvhGI/maxresdefault.jpg">
+
+               <div class="menu-img"><img src="https://i.ytimg.com/vi/oskLFFcvhGI/maxresdefault.jpg" alt=""></div>
+                <h3>Biryani</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(22)">Add To Cart</button>
+            </div>
+
+            <div class="box-container" data-name="south indian"  data-id="23" data-realname="Idli Sambar" data-price="180" data-image="https://www.nehascookbook.com/wp-content/uploads/2022/09/Instant-idli-sambar-WS-1.jpg">
+
+               <div class="menu-img"><img src="https://www.nehascookbook.com/wp-content/uploads/2022/09/Instant-idli-sambar-WS-1.jpg" alt=""></div>
+                <h3>Idli Sambar</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(23)">Add To Cart</button>
+            </div>
+
+            <div class="box-container" data-name="south indian"data-id="1" data-realname="Pongal" data-price="180" data-image="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/01/pongal-ven-pongal.jpg">
+
+               <div class="menu-img"><img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/01/pongal-ven-pongal.jpg" alt=""></div>
+                <h3>Pongal</h3>
+                <div class="price">₹180 <span>₹220</span></div>
+               <button onclick="addToCart(24)">Add To Cart</button>
+            </div>
+    
+            <!----------- Break fast -------------->
+            <div class="box-container" data-name="breakfast" data-id="25" data-realname="Poha" data-price="25" data-image="https://th.bing.com/th/id/OIP.yZpMztmPhtgmpIZAvvoAjAHaJ4?w=1200&h=1600&rs=1&pid=ImgDetMain">
+
+               <div class="menu-img">
+                  <img src="https://th.bing.com/th/id/OIP.yZpMztmPhtgmpIZAvvoAjAHaJ4?w=1200&h=1600&rs=1&pid=ImgDetMain" alt=""></div>
+                <h3>Poha</h3>
+                <div class="price">₹30 <span>₹60</span></div>
+               <button onclick="addToCart(25)">Add To Cart</button>
+            </div>
+      
+
+        <div class="box-container" data-name="breakfast" data-id="26" data-realname="Gatta Sabji" data-price="30" data-image="https://images.slurrp.com/prod/community/2022/April/20611f78-57f0-4ae3-8ca9-059a7d985c0a-1650285668029.webp">
+
+         <div class="menu-img">
+            <img src="https://images.slurrp.com/prod/community/2022/April/20611f78-57f0-4ae3-8ca9-059a7d985c0a-1650285668029.webp" alt=""></div>
+          <h3>Gatta Sabji</h3>
+          <div class="price">₹30 <span>₹80</span></div>
+         <button onclick="addToCart(26)">Add To Cart</button>
+      </div>
+
+      <div class="box-container" data-name="breakfast"   data-id="27" data-realname="Dietitian" data-price="20" data-image="https://www.eatthis.com/wp-content/uploads/sites/4/2021/11/veggie-omelette.jpg?quality=82&strip=all">
+
+         <div class="menu-img">
+            <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2021/11/veggie-omelette.jpg?quality=82&strip=all" alt=""></div>
+          <h3>Dietitian</h3>
+          <div class="price">₹20 <span>₹60</span></div>
+         <button onclick="addToCart(27)">Add To Cart</button>
+      </div>
+
+      <div class="box-container" data-name="breakfast"  data-id="28" data-realname="Aloo Parantha" data-price="20" data-image="https://th.bing.com/th/id/OIP.ALSMcnlqQ8Q4Idg_fTmMewHaHa?w=638&h=638&rs=1&pid=ImgDetMain">
+
+         <div class="menu-img">
+            <img src="https://th.bing.com/th/id/OIP.ALSMcnlqQ8Q4Idg_fTmMewHaHa?w=638&h=638&rs=1&pid=ImgDetMain" alt=""></div>
+          <h3>Aloo Parantha</h3>
+          <div class="price">₹20 <span>₹60</span></div>
+         <button onclick="addToCart(28)">Add To Cart</button>
+      </div>
+
+      <div class="box-container" data-name="breakfast"   data-id="29" data-realname="Oats Khichdi" data-price="15" data-image="https://www.funfoodfrolic.com/10-best-indian-breakfast-recipes/cropped-Oats-Khichdi-Blog.jpg">
+
+         <div class="menu-img">
+            <img src="https://www.funfoodfrolic.com/10-best-indian-breakfast-recipes/cropped-Oats-Khichdi-Blog.jpg" alt=""></div>
+          <h3>Oats Khichdi</h3>
+          <div class="price">₹15 <span>₹26</span></div>
+         <button onclick="addToCart(29)">Add To Cart</button>
+      </div>
+
+      <div class="box-container" data-name="breakfast"  data-id="30" data-realname="Upma" data-price="20" data-image="https://www.funfoodfrolic.com/wp-content/uploads/2018/06/Vermicelli-Upma.jpg">
+
+         <div class="menu-img">
+            <img src="https://www.funfoodfrolic.com/wp-content/uploads/2018/06/Vermicelli-Upma.jpg" alt=""></div>
+          <h3>Upma</h3>
+          <div class="price">₹20 <span>₹40</span></div>
+         <button onclick="addToCart(30)">Add To Cart</button>
+      </div>
+
+   </div>
+
+   <div id="empty-cart" class="empty-cart" style="display: none;">
+    
+      <img src="https://images.all-free-download.com/images/graphicthumb/cooking_background_various_ingredients_pan_icons_falling_decor_6828003.jpg" alt="">
+   
+      <h2>Your Cart is Empty <i class="fa fa-shopping-cart" id="em-cart" aria-hidden="true"></i></h2>
+      <button type="button" class="btn"><a href="Menu.html">Go To Menu</a></button>
+   </div>
+   <div id="cart-section">
+      <h2>Your Cart</h2>
+      <table id="cart-table">
+          <thead>
+              <tr>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+                  <th>Delete</th>
+              </tr>
+          </thead>
+          <tbody id="cart-items"></tbody>
+      </table>
+     
+      <div class="cart-summary-container">
+
+          <!-- Coupon Section -->
+          <div class="coupon-box">
+           <h5>COUPON</h5>
+            <p>Enter your  coupon if you have one.</p>
+            <input type="text" id="coupon-code" placeholder="Enter coupon code">
+            <button class="btn-apply">Apply&nbsp; Coupon</button>
+        </div>
+         <!-- Cart Total Table -->
+         <div class="cart-total">
+             
+            <h5>CART &nbsp; TOTAL</h5>
+          
+               <div class="first">
+                   <h6>Subtotal:</h6>
+                   <p>$<span id="subtotal"> 0.00</span></p>
+               </div>
+               <div class="first">
+                   <h6>Shipping:</h6>
+                   <p>$<span id="shipping"> 00.00</span></p>
+               </div>
+               <hr class="line">
+               <div class="first">
+                   <h6><strong>Total:</strong></h6>
+                   <p><strong>$<span id="total">00.00</span></strong></p>
+               </div>
+               <button class="btn-proceed"><i class="fa fa-shopping-cart" style="margin-right: 10px;font-size: 20px;"></i> Proceed to Checkout</button>
+     
+     </div>
+  </div>
+
+</div>
+
+      <!----------- Footer ----------->
+      <footer>
+         <div class="ft">
+             <div class="logo"><img src="https://th.bing.com/th/id/OIP.H1r6fnSqqSb_YWL5mxFLMQHaHa?rs=1&pid=ImgDetMain" alt="">
+             </div>
+             <div class="social-icons">
+                 <ul>
+                     <li> <i class="fa fa-facebook" aria-hidden="true" id="icon_1"></i></li>
+                     <li><i class="fa fa-twitter" aria-hidden="true" id="icon_2"></i></li>
+                     <li><i class="fa fa-instagram" aria-hidden="true" id="icon_3"></i></li>
+                     <li><i class="fa fa-linkedin" aria-hidden="true" id="icon_4"></i> </li>
+                     <li> <i class="fa fa-paper-plane" aria-hidden="true" id="icon_5"></i></li>
+                 </ul>
+             </div>
+             <div class="nav-name">
+                 <div class="first">
+                     <a href="1-Food-Website.html">Home</a>
+                 </div>
+                 <div class="first">
+                     <a href="About.html">About</a>
+                 </div>
+                 <div class="first">
+                     <a href="Menu.html">Menu</a>
+                 </div>
+                 <div class="first">
+                     <a href="Products.html">Products</a>
+                 </div>
+                 <div class="first">
+                     <a href="Review.html">Review</a>
+                 </div>
+                 <div class="first">
+                     <a href="Contact.html">Contact</a>
+                 </div>
+                 <div class="first">
+                     <a href="Blog.html">Blogs</a>
+                 </div>
+             </div>
+             <div class="ft-content">
+                 <p>Created By <span>TS</span> | All Rights Reserved</p>
+             </div>
+         </div>
+     </footer>
+     </section>
+
+    
+
+     <script>
+      ScrollReveal({
+  reset: true,
+  distance: '60px',
+  duration: 1500,
+  delay: 200
+});
+
+ScrollReveal().reveal('.menu-btn',{delay: 200, origin: 'left'});
+ScrollReveal().reveal('.box',{delay: 250,origin:'bottom'})
+//ScrollReveal().reveal('.ft .logo,.social-icons ,.nav-name,.ft-content',{delay:140,origin:'bottom',interval:200})
+ScrollReveal().reveal('header',{delay: 10,origin:'top'})
+  </script>
+     <script src="Menu.js" defer></script>
+     
+</body>
+</html>

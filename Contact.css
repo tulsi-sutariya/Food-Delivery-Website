@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+html{
+    font-family: 'Roboto',sans-serif;
+}
+.contact{
+    background-color: black;
+}
+.contact .contact-contain{
+    display: flex;
+    padding: 30px 50px;
+    gap: 40px;
+    padding-right: 70px;
+    padding-bottom: 35px;
+    background-color: black;
+}
+.contact .contact-contain .left{
+    flex-basis: 50%;
+    color: white;
+    height: 360px;
+    padding-top: 15px
+}
+.left .c2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.left .c2 h3{
+    text-transform: uppercase;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+.left .c2 p{
+    width: 65%;
+    margin-bottom: 40px;
+}
+.left .c1{
+   display: flex;
+   flex-direction: column;
+   gap: 35px;
+   align-items: center;
+   justify-content: start;
+   padding-right: 146px;
+}
+.left .l1{
+    display: flex;
+    gap: 30px;
+}
+.left .l1 .img1{
+    background-color: white;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+.p1{
+   position: relative;
+   top: 50%;
+   left: -10%;
+}
+.left .l1 .img1 i{
+    color: black;
+    font-size:33px ;
+}
+.left .text1{
+    line-height: 1.44;
+}
+.left .text1 h4{
+    color: red;
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+.contact .contact-contain .right{
+    flex-basis: 50%;
+   /*background-color: #13131a;*/
+    height: 360px;
+}
+.contact .contact-contain .right h1{
+    color: white;
+    text-transform: uppercase;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 34px;
+}
+.contact .contact-contain .right .touch-form{
+    position: relative;
+    display: flex;
+   border: 1px solid white;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 25px;
+}
+.msg-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+.contact .contact-contain .right .touch-form span,.msg-box span{
+    position: absolute;
+    left: 15px;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 32px;
+    color: white;
+}
+.contact .contact-contain .right #call{
+    position: absolute;
+    top: 1px;
+    left: 15px;
+}
+.contact .contact-contain .right .btn{
+    text-align: center;
+}
+.contact .contact-contain .right button{
+    border: none;
+    margin-top: 14px;
+    padding: 10px 30px;
+    cursor: pointer;
+    color: white;
+    border-radius: 3px;
+    border-radius: 20px;
+    background-color: red;
+    font-weight: 500;
+    font-size: 23.5px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    outline: none;
+    position: relative;
+    transition: all 0.4s ease;
+}
+.contact .contact-contain .right button:hover{
+   background-color: orangered;
+}
+.contact .contact-contain .right .touch-form input{
+    width: 100%;
+    background: none;
+    padding: 5px 65px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    height: 50px;
+    padding-right: 20px;
+    font-size: 21px;
+    color: white;
+}
+textarea{
+    width: 100%;
+    resize: none;
+    padding-left: 65px;
+    margin-bottom: 23px;
+    border-radius: 20px;
+    padding-top: 11px;
+    font-size: 21px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+/* Make input and textarea border red when focused */
+.contact .contact-contain .right .touch-form input:focus,
+.contact .contact-contain .right .msg-box textarea:focus {
+    border: 1.2px solid red !important;
+    outline: none;
+}
+/* Make the whole div (touch-form) also get red border */
+.contact .contact-contain .right .touch-form:has(input:focus) {
+    border: 1.2px solid red !important;
+}
+/*------------ FAQ ----------*/
+.faq{
+    color: white;
+    margin-top: 70px;
+    margin-right: 50px;
+    padding-inline:20px ;
+}
+.faq h2{
+    text-align: center;
+    columns: white;
+    font-size: 34px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.faq .faq-container{
+    display: flex;
+    gap: 45px;
+    margin-bottom: 40px;
+}
+.faq .faq-container .f-left{
+    flex-basis: 30%;
+    padding-top: 35px;
+}
+.faq .faq-container .f-left .f-img {
+    height: 550px;
+    width: 500px;
+}
+.faq .faq-container .f-left .f-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.faq .faq-container .f-right{
+    flex-basis: 70%;
+    padding-top: 35px;
+}
+.faq .faq-container .f-right .ques{
+    background-color: #2d2d2d;
+    padding: 13px 20px;
+    font-size: 18px;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    justify-content: space-between;
+}
+.faq-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+.faq-list:first-child{
+    margin-top: 0;
+}
+.faq-list > * {
+    margin: 0;
+}
+#faq1.active i{
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+#faq1.active .ans{
+    max-height: fit-content;
+    transition:all 0.9s ease-in-out;
+}
+.ans p{
+    background-color: #2d2d2d;
+    padding: 13px 20px;
+    padding-bottom: 15px;
+    border-top: 2px solid #000;
+    font-size: 18px;
+}
+.ans{
+    max-height: 0px;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.9s  ease-in-out;
+}
+.ques p{
+    padding-right: 50px;
+}
+.ques:hover{
+    background-color:red !important;
+}
