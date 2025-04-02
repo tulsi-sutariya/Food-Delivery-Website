@@ -19,9 +19,9 @@ A fully functional Food Delivery Website with multiple sections and interactive 
 - 🖊️ Blog Section  
 
 ## 💻 Tech Stack:
-    HTML5
-    CSS
-    JavaScript  
+-  HTML5
+-  CSS
+-  JavaScript  
 
 ## Project Preview:
 ![Image](https://github.com/user-attachments/assets/9bc91c6d-39c5-4077-8ccd-3f1d9a6853c5)
