@@ -24,7 +24,7 @@ A fully functional Food Delivery Website with multiple sections and interactive 
 -  CSS
 -  JavaScript  
 
-## Project Preview:
+## 🎨 Project Preview:
 ![Image](https://github.com/user-attachments/assets/9bc91c6d-39c5-4077-8ccd-3f1d9a6853c5)
 ![Image](https://github.com/user-attachments/assets/6343fdc3-963d-49ad-af11-bf4c01bd77f6)
 ![Image](https://github.com/user-attachments/assets/5388394e-6b04-4d5f-8cb0-fc0b3c901a30)
