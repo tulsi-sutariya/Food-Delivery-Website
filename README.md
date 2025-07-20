@@ -1,6 +1,6 @@
 # Food-Delivery-Website
-A fully functional Food Delivery Website with multiple sections and interactive features.   
-
+I developed a fully designed food delivery website consisting of 7 structured sections, focusing on clean UI/UX and visual consistency. The project emphasizes front-end design with core user interaction features
+l
 ## 📌 Features:  
 ✅ Sections: 
 - 🏠 Home  
@@ -10,7 +10,7 @@ A fully functional Food Delivery Website with multiple sections and interactive 
 - 🛍️ Product
 - ⭐ Review
 - 📝 Blog  
-- 🔐 Login / Forgot Password / Create Account  
+- 🔐 Login / Forgot Password / lCreate Account  
 
 ## ✅ Functionalities:  
 - ⭐ Add Reviews  
