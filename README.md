@@ -1,6 +1,6 @@
 # Food-Delivery-Website
-I developed a fully designed food delivery website consisting of 7 structured sections, focusing on clean UI/UX and visual consistency. The project emphasizes front-end design with core user interaction features
-l
+I developed a fully designed food delivery website consisting of 7 structured sections, focusing on clean UI/UX and visual consistency. The project emphasizes front-end design with core user interaction features.
+
 ## 📌 Features:  
 ✅ Sections: 
 - 🏠 Home  
