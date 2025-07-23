@@ -17,7 +17,6 @@ l
 - 🛒 Add/Remove Items from Cart  
 - 🔍 View Menu Items  
 - 📩 Contact Form Submission  
-- 🖊️ Blog Section  
 
 ## 💻 Tech Stack:
 -  HTML5
